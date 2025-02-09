@@ -1,0 +1,175 @@
+/* Container for the entire section */
+.list-section {
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    margin-top: 2rem;
+  }
+  
+  /* Grid layout: three columns, items placed row-wise (left-to-right) */
+  .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Each list item (card) styling */
+  .list-item {
+    cursor:-moz-grabbing;
+    cursor: grab;
+    position: relative; /* Enables absolute positioning for buttons */
+    background: #ffffff1f;
+    border-radius: 8px;
+    padding: 16px;
+    /* Extra bottom padding for fixed button area */
+    padding-bottom: 80px;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Content area within each list item */
+  .list-item-content {
+    margin-bottom: 20px;
+  }
+  
+  /* Index, title, and body text styling */
+  .list-item-index {
+    font-weight: bold;
+    color: #7d2ae8;
+    margin-bottom: 8px;
+  }
+  
+  .list-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 8px;
+  }
+  
+  .list-item-body {
+    font-size: 14px;
+    color: #555;
+    margin: 0 0 12px;
+  }
+  
+  /* Edit mode input styling */
+  .edit-input {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Fixed buttons container at the bottom of each list item */
+  .list-item-buttons {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    display: flex;
+    gap: 8px;
+  }
+  
+  /* General button styles */
+  .list-item-buttons button {
+    flex: 1; /* Equal width for all buttons */
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Specific button colors */
+  .btn-edit {
+    background-color:  #83c32a;
+    color: #000000;
+  }
+  
+  .btn-delete {
+    background-color: #ec4277;
+    color: #000000;
+  }
+  
+  .btn-cancel {
+    background-color: #ec4277;
+    color: #000000;
+  }
+  
+  .btn-save {
+    background-color: #83c32a;
+    color: #000000;
+  }
+  
+  /* Hover effect for buttons */
+  .list-item-buttons button:hover {
+    opacity: 0.9;
+  }
+  
+
+  /* media query */
+  /* Tablet */
+@media (max-width: 768px) {
+    .list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .list-item {
+      padding: 12px;
+      padding-bottom: 60px;
+    }
+  
+    .list-item-title {
+      font-size: 16px;
+    }
+  
+    .list-item-body {
+      font-size: 12px;
+    }
+  
+    .list-item-buttons {
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+    }
+  
+    .list-item-buttons button {
+      padding: 0.8rem;
+    }
+  }
+  
+  /* Phone */
+  @media (max-width: 480px) {
+    .list {
+      grid-template-columns: 1fr;
+    }
+  
+    .list-item {
+      padding: 8px;
+      padding-bottom: 50px;
+    }
+  
+    .list-item-title {
+      font-size: 14px;
+    }
+  
+    .list-item-body {
+      font-size: 12px;
+    }
+  
+    .list-item-buttons {
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+    }
+  
+    .list-item-buttons button {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+  }
+  
